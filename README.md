@@ -1,5 +1,5 @@
 # hildebrand_glow_ihd
-Hildebrand Glow IHD Local MQTT Home Assistant integration
+Hildebrand Glow IHD Local MQTT Home Assistant integration - Extended
 
 Inspired and heavily based on [@robertalexa](https://github.com/robertalexa) forum thread here: https://community.home-assistant.io/t/glow-hildebrand-display-local-mqtt-access-template-help/428638
 
