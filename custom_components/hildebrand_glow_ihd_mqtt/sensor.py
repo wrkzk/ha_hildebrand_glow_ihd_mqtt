@@ -161,6 +161,18 @@ ELECTRICITY_SENSORS = [
   }
 ]
 
+TEMPERATURE_SENSORS = [
+  {
+    "name": "Current Temperature",
+    "device_class": SensorDeviceClass.TEMP,
+    "unit_of_measurement": UnitOfTemp.CELSIUS,
+    "state_class": None,
+    "icon": "mdi.fire",
+    "func": lambda js : js['glowsensorth1']['804B506188E5']['temperature']['value'],
+    "ignore_zero_values": False,
+  }
+]
+
 GAS_SENSORS = [
   {
     "name": "Smart Meter Gas: Import",
@@ -305,6 +317,7 @@ async def async_get_device_groups(deviceUpdateGroups, async_add_entities, device
             HildebrandGlowMqttSensorUpdateGroup(device_id, "STATE", STATE_SENSORS),
             HildebrandGlowMqttSensorUpdateGroup(device_id, "electricitymeter", ELECTRICITY_SENSORS),
             HildebrandGlowMqttSensorUpdateGroup(device_id, "gasmeter", GAS_SENSORS)
+            HildebrandglowMqttSensorUpdateGroup(device_id, "temperature", TEMPERATURE_SENSORS)
         ]
         async_add_entities(
             [sensorEntity for updateGroup in groups for sensorEntity in updateGroup.all_sensors],
