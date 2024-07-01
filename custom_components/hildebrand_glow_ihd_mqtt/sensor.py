@@ -316,7 +316,7 @@ async def async_get_device_groups(deviceUpdateGroups, async_add_entities, device
         groups = [
             HildebrandGlowMqttSensorUpdateGroup(device_id, "STATE", STATE_SENSORS),
             HildebrandGlowMqttSensorUpdateGroup(device_id, "electricitymeter", ELECTRICITY_SENSORS),
-            HildebrandGlowMqttSensorUpdateGroup(device_id, "gasmeter", GAS_SENSORS)
+            HildebrandGlowMqttSensorUpdateGroup(device_id, "gasmeter", GAS_SENSORS),
             HildebrandglowMqttSensorUpdateGroup(device_id, "temperature", TEMPERATURE_SENSORS)
         ]
         async_add_entities(
