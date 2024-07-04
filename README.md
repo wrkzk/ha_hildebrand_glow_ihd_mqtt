@@ -1,5 +1,6 @@
 # hildebrand_glow_ihd
 Hildebrand Glow IHD Local MQTT Home Assistant integration - Extended
+
 This fork supports Hildebrand Glow Thermal Sensors, and includes some other changes
 
 Inspired and heavily based on [@robertalexa](https://github.com/robertalexa) forum thread here: https://community.home-assistant.io/t/glow-hildebrand-display-local-mqtt-access-template-help/428638
